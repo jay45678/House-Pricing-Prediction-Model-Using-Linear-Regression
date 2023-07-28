@@ -29,6 +29,15 @@ Columns of the dataset table i.e. dependent(X), independent(y) and other variabl
 
 ### Exploratory Data Analysis for House Price Prediction
 We will create some simple plot for visualizing the data.
+Plots like pairplot and displot for the given data frame to identify the variable variable  between relationship.
+sns.pairplot(HouseDF) : This plot is for all the variable variable between relationship.
+
+sns.distplot(HouseDF['Price']) : This plot is for relationship between count and price.
+
+Plot like heatmap of this data frame to identify the dependent and independent variables from other variables. 
+sns.heatmap(HouseDF.corr(), annot=True) : This plot is for relationship between variables like 'Avg. Area Income', 'Avg. Area House Age', 'Avg. Area Number of Rooms',
+       'Avg. Area Number of Bedrooms', 'Area Population'and 'Price'.
+
 
 ### Get Data Ready For Training a Linear Regression Model
 Let’s now begin to train out the regression model. We will need to first split up our data into an X list that contains the features to train on, and a y list with the target variable, in this case, the Price column. We will ignore the Address column because it only has text which is not useful for linear regression modeling.
